@@ -16,5 +16,10 @@ console.timeEnd('uno');
  let product='libro';
  //let product='libro';//genera error ya que existen 2 variables con el mismo nombre
  console.log(product);
+ let dos,tres;
+//concatenar
+ dos='uno'+'dos';
+ console.log(dos);
+ console.log(`${nombre} ${dos}`);
 
 // document.getElementById('app').innerHTML=`Bienvenido ${nombre} de ${edad} años`;
