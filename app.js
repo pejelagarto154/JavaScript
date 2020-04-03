@@ -30,8 +30,14 @@ console.timeEnd('uno');
  console.log(nombre.concat(' ','es genial!'));
  console.log(nombre.toUpperCase());
  console.log(nombre.toLocaleLowerCase());
- let mensaje="aprendiendo javaScript";
+ let mensaje="aprendiendo javaScript css";
  console.log(mensaje.indexOf('javaScript'));
+ console.log(mensaje.substring(3,11));
+ console.log(mensaje.slice(0,11));
+ console.log(mensaje.split(' '));
+ console.log(mensaje.replace('css','php'));
+ console.log(mensaje.includes('php'));
+ console.log(mensaje.repeat(10) );
 
 
 // document.getElementById('app').innerHTML=`Bienvenido ${nombre} de ${edad} años`;
