@@ -39,5 +39,20 @@ console.timeEnd('uno');
  console.log(mensaje.includes('php'));
  console.log(mensaje.repeat(10) );
 
+ //matematicas
+ let result =Math.PI;
+ result=Math.round(2.4);
+ result=Math.ceil(2.4);
+ result=Math.floor(2.4);
+ result=Math.sqrt(144);
+ result=Math.abs(-3);
+ result=Math.pow(8,3);
+ result=Math.min(3,6,5,1,8,9);
+ result=Math.max(2,5,4,9,1);
+ result=Math.random();
+
+
+ console.log(result);
+
 
 // document.getElementById('app').innerHTML=`Bienvenido ${nombre} de ${edad} años`;
