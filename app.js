@@ -176,7 +176,159 @@ for(let i=0;i<auto.length;i++){
 }
 console.log(auto);
 
+//funciones
 
+function saludar(nombre){
+    console.log(`Hola ${nombre}`);
+}
+saludar('mat');
+
+function sumar(a,b){
+    return a+b;
+}
+let s;
+s=sumar(1,7);
+console.log(s);
+
+function cat(n){
+    if(typeof n==='undefined'){
+        n='visitante';
+    }
+    return `hola ${n}`;
+}
+s=cat();
+console.log(s);
+
+function cat2(n = 'visitante'){
+    return `hola ${n}`;
+}
+
+s=cat2('mat');
+console.log(s);
+
+const x=function(a,b){
+    return a+b;
+}
+ console.log(x(5,9));
+
+const z=function(nombre='nn', edad=99, trabajo='full stack'){
+    return `hola ${nombre}, edad ${edad} y trabajas como ${trabajo}`;
+} 
+console.log(z('mat'));
+
+//function IIFE
+
+(function(tec){
+    console.log(`aprendiendo ${tec}`);
+})('javaScript');
+
+//metodos de propiedad
+//cuando una funcion se pone dentro de un objeto
+const musica={
+    reproducir: function(id){
+        console.log(`Reproduccion Musica ${id}`);
+    },
+    pusar: function(){
+        console.log(`pause a la  musica`);
+    }
+}
+musica.borrar=function(id){
+    console.log(`borrando cancion ${id}`);
+}
+musica.reproducir(30);
+musica.pusar();
+musica.borrar(15);
+
+function client(){
+    console.log(`descargando...`);
+    setTimeout(function(){
+        console.log(`completado`);
+    },3000)
+}
+client();
+//funcion que no existe
+try{
+    algo();
+} catch(error){
+    console.log(error);
+}
+finally{
+    console.log('no le importa, ejecurta de todos modos');
+}
+
+// date
+
+const dia=new Date();
+
+console.log(dia);
+
+let navidad=new Date('12-25-1991');
+
+console.log(navidad);
+
+let val;
+val=dia.getMonth();
+
+console.log(val);
+
+val=dia.getDate();
+console.log(val);
+val=dia.getDay();
+console.log(val);
+val=dia.getFullYear();
+console.log(val);
+val=dia.getMinutes();
+console.log(val);
+val=dia.getTime();
+console.log(val);
+val=dia.setFullYear(2000);
+val=dia.getFullYear();
+console.log(val);
+
+//if elseif
+
+const d=15;
+
+if(d>18){
+    console.log(`puedes entrar`);
+}
+else{
+    console.log(`no puedes entrar`);
+}
+
+let punt;
+
+if(punt){
+    console.log(`el puntaje es de ${punt}`);
+}
+else{
+    console.log(`no hay puntaje`);
+}
+
+if(d<=10){
+    console.log(`buenos dias`);
+}
+else if(d<=18){
+    console.log(`Buenas tardes`);
+}
+else{
+    console.log(`buenas noches`);
+}
+
+punt=100;
+
+if(punt<150){
+    console.log('uno');
+}
+else if(punt<200){
+    console.log('dos');
+}
+
+//ternario
+
+const log=true;
+
+console.log( log===true ? 'logueado':'no logueado');
 
 
 
