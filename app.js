@@ -330,6 +330,202 @@ const log=true;
 
 console.log( log===true ? 'logueado':'no logueado');
 
+//switch
+const met='efectivo';
+
+switch(met){
+    case 'efectivo':
+        console.log(`pagado con ${met}`);
+    break;
+    case 'cheque':
+        console.log(`pagado con ${met}`);    
+    break;
+    default:
+        console.log(`no soportado`);
+    break;    
+}
+let mese;
+switch(new Date().getMonth()){
+    case 0:
+        mese='enero';
+    break;
+    case 1:
+        mese='febrero';
+    break;  
+    case 2:
+        mese='marzo';
+    break;
+    case 3:
+        mese='abril';
+    break;      
+}
+
+console.log(`mes ${mese}`);
+
+//for loops
+
+for(let i = 0;i <10;i++){
+    console.log(`numero: ${i}`);
+}
+
+i=0;
+while(i<10){
+    if(i==5){
+        console.log('cinco');
+        i++;
+        continue;
+    }
+    console.log(`numero: ${i}`);
+    i++;
+}
+i=12;
+
+do{
+    console.log(`${i}`);
+    i++;
+}while(i<10);
+
+const gg=['uno','dos','tres'];
+
+gg.forEach(function(g, index){
+    console.log(`${index}:| ${g}`);
+});
+
+const mati=[
+    {id:1,producto:'libro'},
+    {id:2,producto:'revista'},
+    {id:3,producto:'papel'}
+];
+
+const pp=mati.map(function(mati){
+    return mati.producto;
+});
+console.log(pp);
+
+const car={
+    modelo: '318',
+    motor: 'm10',
+    anio: 1987,
+    marca: 'bmw'
+};
+
+for( let cars in car){
+    console.log(`${cars}:${car[cars]}`);
+}
+
+const ciudades=['stgo','conce','arica'];
+const ordenes=new Set([123,321,456]);
+const data=new Map();
+data.set('nombre','juan');
+data.set('profesion','desarrollador');
+
+console.log(ciudades);
+console.log(ordenes);
+console.log(data);
+//entries iterador
+
+for(let entrada of ciudades.entries()){
+    console.log(entrada);
+}
+for(let entrada of ordenes.entries()){
+    console.log(entrada);
+}
+for(let entrada of data.entries()){
+    console.log(entrada);
+}
+
+//values iterador dafault
+
+for(let entrada of ciudades){
+    console.log(entrada);
+}
+for(let entrada of ordenes){
+    console.log(entrada);
+}
+for(let entrada of data.values()){
+    console.log(entrada);
+}
+// for(let entrada of data){
+//     console.log(entrada);
+// }default
+
+//keys iterador
+
+for(let entrada of ciudades.keys()){
+    console.log(entrada);
+}
+for(let entrada of ordenes.keys()){
+    console.log(entrada);
+}
+for(let entrada of data.keys()){
+    console.log(entrada);
+}
+
+const mesag='aprendiendo';
+
+for(let letra of mesag){
+    console.log(letra);
+}
+
+const enlace=document.getElementsByTagName('a');
+for(let enla of enlace){
+    console.log(enla.href);
+}
+
+//windows object
+
+// if(confirm('eliminar?')){
+//     console.log('eliminado');
+// }
+// else{
+//     console.log('nada paso');
+// }
+
+let alto, ancho,ubicacion;
+
+alto=window.outerHeight;
+ancho=window.outerWidth;
+console.log(alto);
+console.log(ancho);
+
+ubicacion=window.location;
+
+//window.history.go(-2) vuelve a la busqueda anterior en el navegador
+
+console.log(ubicacion);
+
+ubicacion=window.navigator;
+console.log(ubicacion);
+
+//scope
+
+var a='a';
+let b='b';
+const c='c';
+
+function scope(){
+    var a='A';
+    let b='B';
+    const c='C';
+    console.log('funcion:'+a,b,c);
+}
+scope();
+
+if(true){
+    var a='AA';
+    let b='BB';
+    const c='CC';
+    console.log('funcion 2:'+a,b,c);
+}
+
+console.log('global:'+a,b,c);
+
+
+
+
+
+
+
 
 
 
